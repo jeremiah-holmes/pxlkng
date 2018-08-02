@@ -1,0 +1,45 @@
+* {
+	box-sizing: border-box;
+}
+.header {
+	background-color: black;
+	text-align: center;
+	
+}
+h1 {
+	color: red;
+
+}
+.mainpic {
+	background-image: url(images/marg.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	padding: 100px 50px;
+		
+}
+ui {
+	display: inline-block;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	position: fixed;
+	bottom: 0;
+}
+li {
+	float: none;
+}
+li a {
+	display: block;
+	color: chartreuse;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+li a:hover:not(.active) {
+	background-color: #111;
+}
+.active {
+	background-color: aqua;
+}
