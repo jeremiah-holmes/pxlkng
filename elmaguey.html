@@ -8,6 +8,7 @@
 
 	* {
 		box-sizing: border-box;
+		
 	}
 	.header {
 		height: 25vh;
@@ -22,39 +23,44 @@
 	}
 
 	.navbar {
+		transition: 0.3s;
 		text-align: center;
 		overflow: hidden;
 		color: tan;
-		padding: 10px 0px;
+		padding: 0px 0px;
 		margin-bottom: 20px;
 	}
 	
 	.navbar a {
+		display: block;
+		display: inline-block;
 		background-color: black;
-		float: none;
 		color: tan;
-		padding: 10px 20px;
+		padding: 15px 20px;
 		text-decoration: none;
+		align-content: center;
 	}
 	.navbar a:hover {
 		background-color: tan;
 		color: black;
 	}
 	.row1 {
-		
-	}
-	.row1 img {
+		margin-left: 6vw;
 		height: 65vh;
-		padding: 0px 0px;
-		
+		width: 86vw;
+		background-image: url(images/inside.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
+
 	.menu {
+
 		float: left;
     	width: 20vw;
 		height: 23vh;
 		margin: 1vh 1vw;
 		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-		transition: 0.3s;
 		background-position: center;
 	}
 	
@@ -109,6 +115,8 @@
 <center>
 <div class="header">
 <div class="title">
+	
+
 	<img src="images/logo2.png">
 </div>
 <div class="logo">
@@ -127,9 +135,6 @@
 
 <div class="content">
 	<div class="row1">
-		<center>
-		<img src="images/inside.png">
-		</center>
 	</div>
 
 	
