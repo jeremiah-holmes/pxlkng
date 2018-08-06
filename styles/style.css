@@ -1,0 +1,40 @@
+body {
+	
+	margin: 1em;
+	overflow: scroll;
+	scroll-snap-type: y proximity;
+  	/* Reserve space for header and additional space so above page are visible a bit*/ 
+  	scroll-padding-top:  calc(var(--bar-height) + var(--extra-space));
+	position: absolute;
+
+	top:0;
+	bottom:0;
+	left: 0;
+	right: 0;
+	padding: var(--bar-height) 0 0 0;
+}
+header {
+	scroll-snap-align: start; /* snap align start */
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  
+  	border-top: 2px black solid;
+  	font-size: 36px;
+}
+section {
+  scroll-snap-align: start; /* snap align start */
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  
+	border-top: 2px black solid;
+	font-size: 36px;
+}
+section.large {
+	height: 100vh;
+}
