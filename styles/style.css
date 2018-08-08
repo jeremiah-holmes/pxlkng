@@ -21,6 +21,10 @@ body {
 	color: black;;
 	background-color: dimgray
 }
+.header h1 {
+
+     margin-left: -1vw
+}
 .section {
   scroll-snap-align: start; /* snap align start */
 
