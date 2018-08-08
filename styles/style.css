@@ -16,13 +16,12 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-
-  	font-size: 36px;
 	color: black;;
 	background-color: dimgray
 }
 .header h1 {
-     margin: 0 -10vh;
+     font-size: 36px;
+     margin: 0 -20vh;
      margin-left: -1vw;
 }
 .section {
