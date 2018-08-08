@@ -22,7 +22,7 @@ body {
 	background-color: dimgray
 }
 .header h1 {
-     margin: 0 10vh;
+     margin: 0 -10vh;
      margin-left: -1vw;
 }
 .section {
