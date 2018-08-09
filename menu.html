@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>El Maguey</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+	* {
+		box-sizing: border-box;
+		
+	}
+	.header {
+		height: 25vh;
+	}
+	.title img {
+		margin-top: -10vh;
+		margin-bottom: -7.5vh;
+		height: 30vh;
+	}
+	.logo img {
+		height: 10vh;
+	}
+
+	.navbar {
+		transition: 0.3s;
+		text-align: center;
+		overflow: hidden;
+		color: tan;
+		padding: 0px 0px;
+		margin-bottom: 20px;
+	}
+	
+	.navbar a {
+		display: block;
+		display: inline-block;
+		background-color: black;
+		color: tan;
+		padding: 15px 20px;
+		text-decoration: none;
+		align-content: center;
+	}
+	.navbar a:hover {
+		background-image: url(images/background.jpg);
+		color: black;
+	}
+	.row1 {
+		margin-left: 6vw;
+		height: 65vh;
+		width: 86vw;
+		background-image: url(images/inside.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-color: rgba(255, 0, 0, 1);
+	}
+
+	.menu {
+		float: left;
+    	width: 20vw;
+		height: 23vh;
+		margin: 1vh 1vw;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		background-position: center;
+		opacity: 0.5;
+		filter: alpha(opacity=50);
+
+	}
+	
+	.menu h2 {
+		text-align: center;
+		padding-top: 15vh;
+		line-height: 20px;
+		opacity: 0;
+	}
+	
+	.menu:hover {
+		opacity: 1.0;
+    	filter: alpha(opacity=100);
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0,100);
+	}
+	.menu:hover h2 {
+		opacity: 100;
+		color: white;
+	}
+	.row2 {
+		vertical-align: middle;
+		margin-left: 5vw;
+	}	
+
+	.row2 h2 {
+		font-size: 2.5vh;
+	}
+
+	.row2:after {
+    	content: "";
+    	display: table;
+    	clear: both;
+	}
+	.row3{
+		height: 99vh;
+		margin: 0 -1vw;
+		width: 98vw;
+		
+		text-align: center;
+		vertical-align: middle;
+		color: tan;
+		background-color: black;
+	}
+
+	body {
+		font-family: arial, helvetica, sans-serif;
+		background-image: url(images/background.jpg);
+	}
+</style>
+</head>
+
+	
+<body>
+<!--	
+	<div class="header">
+		<h1>EL MAGUEY</h1>
+		<h2>Mexican Resturant</h2>
+		<img src="images/logo.png" alt="ElMagLogo">
+	</div><!DOCTYPE html>
+<html>
+<head>
+	<title>El Maguey</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+	* {
+		box-sizing: border-box;
+		
+	}
+	.header {
+		height: 25vh;
+	}
+	.title img {
+		margin-top: -10vh;
+		margin-bottom: -7.5vh;
+		height: 30vh;
+	}
+	.logo img {
+		height: 10vh;
+	}
+
+	.navbar {
+		transition: 0.3s;
+		text-align: center;
+		overflow: hidden;
+		color: tan;
+		padding: 0px 0px;
+		margin-bottom: 20px;
+	}
+	
+	.navbar a {
+		display: block;
+		display: inline-block;
+		background-color: black;
+		color: tan;
+		padding: 15px 20px;
+		text-decoration: none;
+		align-content: center;
+	}
+	.active {
+		
+	}
+	.navbar a:hover {
+		background-image: url(images/background.jpg);
+		color: black;
+	}
+	.row1 {
+		margin-left: 6vw;
+		height: 65vh;
+		width: 86vw;
+		background-image: url(images/inside.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-color: rgba(255, 0, 0, 1);
+	}
+
+	.menu {
+		float: left;
+    	width: 20vw;
+		height: 23vh;
+		margin: 1vh 1vw;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		background-position: center;
+		opacity: 0.5;
+		filter: alpha(opacity=50);
+
+	}
+	
+	.menu h2 {
+		text-align: center;
+		padding-top: 15vh;
+		line-height: 20px;
+		opacity: 0.5;
+	}
+	.menu:hover {
+		opacity: 1.0;
+    	filter: alpha(opacity=100);
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0,100);
+	}
+	.menu:hover h2 {
+		opacity: 100;
+		color: white;
+	}
+	.row2 {
+		vertical-align: middle;
+		margin-left: 5vw;
+	}	
+
+	.row2 h2 {
+		font-size: 2.5vh;
+	}
+
+	.row2:after {
+    	content: "";
+    	display: table;
+    	clear: both;
+	}
+	.row3{
+		height: 99vh;
+		margin: 0 -1vw;
+		width: 98vw;
+		
+		text-align: center;
+		vertical-align: middle;
+		color: tan;
+		background-color: black;
+	}
+
+	body {
+		font-family: arial, helvetica, sans-serif;
+		background-image: url(images/background.jpg);
+	}
+</style>
+</head>
+
+	
+<body>
+<!--	
+	<div class="header">
+		<h1>EL MAGUEY</h1>
+		<h2>Mexican Resturant</h2>
+		<img src="images/logo.png" alt="ElMagLogo">
+	</div>
+-->
+<center>
+<div class="header">
+<div class="title">
+	
+
+	<img src="images/logo2.png">
+</div>
+<div class="logo">
+	<img src="images/logo.png">
+</div>
+</div>
+</center>
+<div class="navbar">
+	<a class="active" href="elmaguey.html">HOME</a>
+	<a href="menu.html">MENU</a>
+	<a href="javascript:void(0)">DRINKS</a>
+	<a href="javascript:void(0)">ABOUT</a>
+	<a href="javascript:void(0)">CONTACT</a>
+</div>
+
+	
+<div class="row2">
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Nachos</h2>
+	</div>
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Appetizers</h2>
+	</div>
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Lunch</h2>
+	</div>
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Entrees</h2>
+	</div>
+</div>
+		
+<div class="row2">
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Specials</h2>
+	</div>
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Fajitas</h2>
+	</div>
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Chicken from the Grill</h2>
+	</div>
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Seafood</h2>
+	</div>
+</div>
+	
+<div class="row2">
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Steaks</h2>
+	</div>
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Quesadillas</h2>
+	</div>
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Soups and Salads</h2>
+	</div>
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Enchiladas</h2>
+	</div>
+</div>
+
+<div class="row2">
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>A La Carte</h2>
+	</div>
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Burritos</h2>
+	</div>
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Vegetarian</h2>
+	</div>
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Dinner Combinations</h2>
+	</div>
+</div>
+	
+
+		
+
+	
+	<br>
+<div class="row3">	
+	<br>
+	<h1>Contact</h1>
+	<h2>Call Us</h2>
+	<h3>660.582.1104</h3>
+	
+	<h2>Address</h2>
+	<p>964 South Main Street <br> Maryville, MO 64468</p>
+	
+	<h2>Hours</h2>
+	<p>Monday: 11:00 AM - 10:00 PM</p>
+	<p>Tuesday: 11:00 AM - 10:00 PM</p>
+	<p>Wednesday: 11:00 AM - 10:00 PM</p>
+	<p>Thursday: 11:00 AM - 10:00 PM</p>
+	<p>Friday: 11:00 AM - 10:30 PM</p>
+	<p>Saturday: 11:00 AM - 10:30 PM</p>
+	<p>Sunday: 11:00 AM - 10:00 PM</p>
+	
+	
+
+	
+</div>
+	
+</div>
+</body>
+</html>
+-->
+<center>
+<div class="header">
+<div class="title">
+	
+
+	<img src="images/logo2.png">
+</div>
+<div class="logo">
+	<img src="images/logo.png">
+</div>
+</div>
+</center>
+<div class="navbar">
+	<a href="elmaguey.html">HOME</a>
+	<a class="active" href="menu.html">MENU</a>
+	<a href="javascript:void(0)">DRINKS</a>
+	<a href="javascript:void(0)">ABOUT</a>
+	<a href="javascript:void(0)">CONTACT</a>
+</div>
+
+
+<div class="content">
+
+	
+	
+<div class="row2">
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Nachos</h2>
+	</div>
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Appetizers</h2>
+	</div>
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Lunch</h2>
+	</div>
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Entrees</h2>
+	</div>
+</div>
+		
+<div class="row2">
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Specials</h2>
+	</div>
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Fajitas</h2>
+	</div>
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Chicken from the Grill</h2>
+	</div>
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Seafood</h2>
+	</div>
+</div>
+	
+<div class="row2">
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Steaks</h2>
+	</div>
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Quesadillas</h2>
+	</div>
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Soups and Salads</h2>
+	</div>
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Enchiladas</h2>
+	</div>
+</div>
+
+<div class="row2">
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>A La Carte</h2>
+	</div>
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Burritos</h2>
+	</div>
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Vegetarian</h2>
+	</div>
+	<div class="menu" style="background-image: url(images/menuholder.png)">
+		<h2>Dinner Combinations</h2>
+	</div>
+</div>
+	
+
+		
+
+	
+	<br>
+<div class="row3">	
+	<br>
+	<h1>Contact</h1>
+	<h2>Call Us</h2>
+	<h3>660.582.1104</h3>
+	
+	<h2>Address</h2>
+	<p>964 South Main Street <br> Maryville, MO 64468</p>
+	
+	<h2>Hours</h2>
+	<p>Monday: 11:00 AM - 10:00 PM</p>
+	<p>Tuesday: 11:00 AM - 10:00 PM</p>
+	<p>Wednesday: 11:00 AM - 10:00 PM</p>
+	<p>Thursday: 11:00 AM - 10:00 PM</p>
+	<p>Friday: 11:00 AM - 10:30 PM</p>
+	<p>Saturday: 11:00 AM - 10:30 PM</p>
+	<p>Sunday: 11:00 AM - 10:00 PM</p>
+	
+	
+
+	
+</div>
+	
+</div>
+</body>
+</html>
