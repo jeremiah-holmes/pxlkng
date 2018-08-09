@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>El Maguey</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>El Maguey</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
 	* {
@@ -40,58 +40,76 @@
 		text-decoration: none;
 		align-content: center;
 	}
+	.active {
+		
+	}
 	.navbar a:hover {
-		background-color: tan;
+		background-image: url(images/background.jpg);
 		color: black;
 	}
 	.row1 {
-		margin-left: 6vw;
+		margin: 0 -1vw;
 		height: 65vh;
-		width: 86vw;
+		width: 98vw;
 		background-image: url(images/inside.png);
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
+		background-color: rgba(255, 0, 0, 1);
+	}
+	.row2 {
+		height: 110vh;
+		margin-top: 5vh;
+	}
+	.row2 h1 {
+		text-align: center;
 	}
 
 	.menu {
-
 		float: left;
-    	width: 20vw;
-		height: 23vh;
-		margin: 1vh 1vw;
+    	width: 25vw;
+		height: 25vh;
+		margin: 1vh 2vw;
 		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 		background-position: center;
+		opacity: 0.5;
+		filter: alpha(opacity=50);
+
 	}
-	
 	.menu h2 {
 		text-align: center;
-		padding-top: 125px;
+		padding-top: 15vh;
 		line-height: 20px;
+		opacity: 0.5;
 	}
-	
 	.menu:hover {
-		box-shadow: 0 8px 16px 0 rgba(0,0,0,0,2);
+		opacity: 1.0;
+    	filter: alpha(opacity=100);
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0,100);
 	}
-	.row2 {
+	.menu:hover h2 {
+		opacity: 100;
+		color: white;
+	}
+	.row22 {
 		vertical-align: middle;
 		margin-left: 5vw;
 	}	
 
-	.row2 h2 {
+	.row22 h2 {
 		font-size: 2.5vh;
-		color: aliceblue;
 	}
 
-	.row2:after {
+	.row22:after {
     	content: "";
     	display: table;
     	clear: both;
 	}
 	.row3{
 		height: 99vh;
-		margin-left: 6vw;
-		width: 86vw;
+		margin: 0 -1vw;
+		width: 98vw;
+		
 		text-align: center;
 		vertical-align: middle;
 		color: tan;
@@ -127,87 +145,67 @@
 </div>
 </center>
 <div class="navbar">
-	<a class="active" href="javascript:void(0)">HOME</a>
-	<a href="javascript:void(0)">MENU</a>
+	<a class="active" href="elmaguey.html">HOME</a>
+	<a href="menu.html">MENU</a>
 	<a href="javascript:void(0)">DRINKS</a>
 	<a href="javascript:void(0)">ABOUT</a>
 	<a href="javascript:void(0)">CONTACT</a>
 </div>
+	
+	
 
 
 <div class="content">
 	<div class="row1">
 	</div>
+<hr>
+<div class="row2">	
+	<h1>MENU</h1>
+	<div class="row22">
+		<div class="menu" style="background-image: url(images/menuholder.png)">
+			<h2>Specials</h2>
+		</div>
+		<div class="menu" style="background-image: url(images/menuholder.png)">
+			<h2>Fajitas</h2>
+		</div>
+		<div class="menu" style="background-image: url(images/menuholder.png)">
+			<h2>Chicken from the Grill</h2>
+		</div>
+	</div>
 
-	
-	
-<div class="row2">
-	<div class="menu" style="background-image: url(images/menuholder.png)">
-		<h2>Nachos</h2>
-	</div>
-	<div class="menu" style="background-image: url(images/menuholder.png)">
-		<h2>Appetizers</h2>
-	</div>
-	<div class="menu" style="background-image: url(images/menuholder.png)">
-		<h2>Lunch</h2>
-	</div>
-	<div class="menu" style="background-image: url(images/menuholder.png)">
-		<h2>Entrees</h2>
-	</div>
-</div>
-		
-<div class="row2">
-	<div class="menu" style="background-image: url(images/menuholder.png)">
-		<h2>Specials</h2>
-	</div>
-	<div class="menu" style="background-image: url(images/menuholder.png)">
-		<h2>Fajitas</h2>
-	</div>
-	<div class="menu" style="background-image: url(images/menuholder.png)">
-		<h2>Chicken from the Grill</h2>
-	</div>
-	<div class="menu" style="background-image: url(images/menuholder.png)">
-		<h2>Seafood</h2>
-	</div>
-</div>
-	
-<div class="row2">
-	<div class="menu" style="background-image: url(images/menuholder.png)">
-		<h2>Steaks</h2>
-	</div>
-	<div class="menu" style="background-image: url(images/menuholder.png)">
-		<h2>Quesadillas</h2>
-	</div>
-	<div class="menu" style="background-image: url(images/menuholder.png)">
-		<h2>Soups and Salads</h2>
-	</div>
-	<div class="menu" style="background-image: url(images/menuholder.png)">
-		<h2>Enchiladas</h2>
-	</div>
-</div>
+	<div class="row22">
+		<div class="menu" style="background-image: url(images/menuholder.png)">
+			<h2>Steaks</h2>
+		</div>
+		<div class="menu" style="background-image: url(images/menuholder.png)">
+			<h2>Quesadillas</h2>
+		</div>
+		<div class="menu" style="background-image: url(images/menuholder.png)">
+			<h2>Soups and Salads</h2>
+		</div>
 
-<div class="row2">
-	<div class="menu" style="background-image: url(images/menuholder.png)">
-		<h2>A La Carte</h2>
 	</div>
-	<div class="menu" style="background-image: url(images/menuholder.png)">
-		<h2>Burritos</h2>
-	</div>
-	<div class="menu" style="background-image: url(images/menuholder.png)">
-		<h2>Vegetarian</h2>
-	</div>
-	<div class="menu" style="background-image: url(images/menuholder.png)">
-		<h2>Dinner Combinations</h2>
+
+	<div class="row22">
+		<div class="menu" style="background-image: url(images/menuholder.png)">
+			<h2>A La Carte</h2>
+		</div>
+		<div class="menu" style="background-image: url(images/menuholder.png)">
+			<h2>Burritos</h2>
+		</div>
+		<div class="menu" style="background-image: url(images/menuholder.png)">
+			<h2>Vegetarian</h2>
+		</div>
 	</div>
 </div>
 	
 
 		
 
-	
-	<br>
 <div class="row3">	
 	<br>
+	<br>
+	
 	<h1>Contact</h1>
 	<h2>Call Us</h2>
 	<h3>660.582.1104</h3>
