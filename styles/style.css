@@ -22,7 +22,7 @@ body {
     margin-top: 20vh;
   	font-size: 36px;
 	color: black;
-	background-image: url("/images/FF85AA0F-D286-4B5B-8604-47610DD6069C.jpeg");
+	background: url("/images/FF85AA0F-D286-4B5B-8604-47610DD6069C.jpeg");
 }
 .header .h1 {
     margin-left: 100vw;
@@ -49,7 +49,7 @@ body {
 }
 .section .large {
     scroll-snap-align: start; /* snap align start */
-	background-color: dimgrey;
+	background: url("/images/FF85AA0F-D286-4B5B-8604-47610DD6069C.jpeg");
 	width: 75vw;
 	height: 80vh;
 	
