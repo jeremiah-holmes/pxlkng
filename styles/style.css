@@ -1,39 +1,57 @@
+@font-face {
+    font-family: caviarDreams;
+    src: url("/fonts/CaviarDreams.ttf")
+}
+* {
+    
+    font-family: caviarDreams;
+}
 body {
-	background: linear-gradient(black, dimgray);
-	margin: 0 1em;
+	background-color: black;
+	margin: 0 0em;
 	overflow: scroll;
 	position: absolute;
 
 	top: 0;
 	bottom: 0;
-	left: 0;
+	left: 0vw;
 	right: 0;
 	padding: var(--bar-height) 0 0 0;
 }
-.header {
-	scroll-snap-align: start; /* snap align start */
+.header2 {
     text-align: center;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-    height: 6.5vw;
-    width: 40vw;
-    margin-left: 30vw;
-    margin-top: 20vh;
-    padding-right: 30vw;
+    height: 10vw;
+    width: 35vw;
+    margin-left: 32.5vw;
+
+
   	font-size: 5vw;
 	color: black;
 	background-image: url("/images/FF85AA0F-D286-4B5B-8604-47610DD6069C.jpeg");
 }
-.header .h1 {
+.header2 .h1 {
     margin-left: 100vw;
     
 }
-.nav  {
+.header11  {
     color: white;
     text-align: center;
-    padding-top: 20vh;
+    margin-top: 17.5vh;
+    margin-bottom: 17.5vh;
+    margin-left: 0vw;
 }
+.header12  {
+    cursor: help;
+    color: white;
+    text-align: center;
+    margin-top: 17.5vh;
+    margin-bottom: 17.5vh;
+    margin-left: 0vw;
+}
+
 .spacer {
     height: 10vh;
 }
@@ -49,15 +67,13 @@ body {
 	font-size: 36px;
 }
 .section .large {
-    scroll-snap-align: start; /* snap align start */
-	background: url("/images/FF85AA0F-D286-4B5B-8604-47610DD6069C.jpeg");
-	width: 75vw;
+	background: gray;
+	width: 99vw;
 	height: 80vh;
 	
 }
 .section .elmaguey {
 	margin: 5vw;
 	font-size: 10px;
-    text-align: center;
-    padding-top: 20vh;
+    height: 40vh;
 }
