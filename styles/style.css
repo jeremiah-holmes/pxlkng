@@ -30,7 +30,7 @@ body {
 
   	font-size: 5vw;
 	color: black;
-	background-image: url("/images/FF85AA0F-D286-4B5B-8604-47610DD6069C.jpeg");
+	background: url("/images/greytexture.png");
 }
 .header2 .h1 {
     margin-left: 100vw;
@@ -67,13 +67,25 @@ body {
 	font-size: 36px;
 }
 .section .large {
+    text-align: center;
 	background: gray;
 	width: 99vw;
 	height: 80vh;
 	
 }
 .section .elmaguey {
+	margin: 10vh 0vw;
+	font-size: 10px;
+    height: 10vh;
+}
+.section .nwmorcog {
 	margin: 5vw;
 	font-size: 10px;
-    height: 40vh;
+    height: 10vh;
+}
+.contact {
+    height: 60vh;
+    margin: 5vw;
+    font-size: 2vw;
+    
 }
