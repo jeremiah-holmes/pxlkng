@@ -16,19 +16,21 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-    height: 10vh;
+    height: 6vh;
     width: 75vw;
-    margin-left: 10vw;
+    margin-left: 11vw;
     margin-top: 20vh;
   	font-size: 36px;
 	color: black;
-	background-color: dimgray
+	background-color: dimgray;
+}
+.header .h1 {
+    margin-left: 100vw;
+    
 }
 .nav  {
     color: white;
     text-align: center;
-    width: 30vw;
-    padding-left: 35vw;
     padding-top: 20vh;
 }
 .spacer {
