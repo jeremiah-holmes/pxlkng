@@ -32,14 +32,11 @@ body {
 	color: black;
 	background: url("/images/greytexture.png");
 }
-<<<<<<< HEAD
 .header .h1 {
     text-shadow: 2px 2px 2px black;
-=======
+}
 .header2 .h1 {
     margin-left: 100vw;
->>>>>>> a004d2fb29eb8eb1515da624bfef942b2f03acef
-    
 }
 .header11  {
     color: white;
