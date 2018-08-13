@@ -4,6 +4,7 @@
 	<title>El Maguey</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="elmaguey icon" href="images/logo.png" type="image/x-icon" />
 <style>
 
 	* {
@@ -17,7 +18,7 @@
 		margin-top: -10vh;
         max-width: 80vw;
 		margin-bottom: -7.5vh;
-		height: 30vh;
+		max-height: 30vh;
 	}
 	.logo img {
         text-align: center;
@@ -30,7 +31,7 @@
 		overflow: hidden;
 		color: tan;
 		padding: 0px 0px;
-		margin-bottom: 20px;
+		margin-bottom: 2vw;
 	}
 	
 	.navbar a {
@@ -61,13 +62,10 @@
 		background-color: rgba(255, 0, 0, 1);
 	}
 	.row2 {
+        text-align: center;
 		height: 110vh;
-		margin-top: 5vh;
+		margin-top: 15vh;
 	}
-	.row2 h1 {
-		text-align: center;
-	}
-
 	.menu {
 		float: left;
     	width: 25vw;
@@ -108,16 +106,84 @@
     	display: table;
     	clear: both;
 	}
-	.row3{
+    .row3 h1 {
+		text-align: center;
+	}
+
+    .drinks {
+		float: left;
+    	width: 25vw;
+		height: 25vh;
+		margin: 1vh 2vw;
+		box-shadow: 0 1vh 1vh 0 rgba(0,0,0,0.2);
+		background-position: center;
+		opacity: 0.5;
+		filter: alpha(opacity=50);
+	}
+	.drinks h2 {
+		text-align: center;
+		padding-top: 15vh;
+		line-height: 20px;
+		opacity: 0.5;
+	}
+	.drinks:hover {
+		opacity: 1.0;
+    	filter: alpha(opacity=100);
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0,100);
+	}
+	.drinks:hover h2 {
+		opacity: 100;
+		color: white;
+	}
+		
+    .row33 {
+
+		vertical-align: middle;
+		margin-left: 5vw;
+	}	
+
+	.row33 h2 {
+		font-size: 2.5vh;
+	}
+
+	.row33:after {
+        
+    	content: "";
+    	display: table;
+    	clear: both;
+    }
+    .row3{
+        margin-top: 5vh;
+        margin-bottom: 30vh;
+        
+    }
+	.row4{
+        
 		height: 99vh;
-		margin: 0 -1vw;
-		width: 98vw;
+		margin: 0 0vw;
+        
+        padding-top: 20vh;
+        padding-bottom: -2vh;
+        padding-left: 5vw;
+		width: 97vw;
 		
 		text-align: center;
 		vertical-align: middle;
 		color: tan;
 		background-color: black;
+
 	}
+    .row41 {
+        float: left;
+        width: 40vw;
+
+        
+    }
+    .row42 {
+        float: left;
+        width: 40vw;
+        
+    }
 
 	body {
 		font-family: arial, helvetica, sans-serif;
@@ -159,53 +225,79 @@
 
 
 <div class="content">
-	<div class="row1">
-	</div>
-<hr>
-<div class="row2">	
-	<h1>MENU</h1>
-	<div class="row22">
-		<div class="menu" style="background-image: url(images/menuholder.png)">
+	
+    <div class="row1"></div>
+    
+    <div class="row2">	
+	   <h1>MENU</h1>
+	   <div class="row22">
+		  <div class="menu" style="background-image: url(images/menuholder.png)">
 			<h2>Specials</h2>
-		</div>
-		<div class="menu" style="background-image: url(images/menuholder.png)">
+		  </div>
+		  <div class="menu" style="background-image: url(images/menuholder.png)">
 			<h2>Fajitas</h2>
-		</div>
-		<div class="menu" style="background-image: url(images/menuholder.png)">
+		  </div>
+		  <div class="menu" style="background-image: url(images/menuholder.png)">
 			<h2>Chicken from the Grill</h2>
-		</div>
+		  </div>
 	</div>
 
 	<div class="row22">
-		<div class="menu" style="background-image: url(images/menuholder.png)">
+		  <div class="menu" style="background-image: url(images/menuholder.png)">
+			<h2>Steaks</h2>
+		  </div>
+		  <div class="menu" style="background-image: url(images/menuholder.png)">
+			<h2>Quesadillas</h2>
+            </div>
+		  <div class="menu" style="background-image: url(images/menuholder.png)">
+			<h2>Soups and Salads</h2>
+		  </div>
+	</div>
+
+	<div class="row22">
+		  <div class="menu" style="background-image: url(images/menuholder.png)">
+			<h2>A La Carte</h2>
+		  </div>
+		  <div class="menu" style="background-image: url(images/menuholder.png)">
+			<h2>Burritos</h2>
+		  </div>
+		  <div class="menu" style="background-image: url(images/menuholder.png)">
+			<h2>Vegetarian</h2>
+		  </div>
+	</div>
+</div>
+
+	
+<div class="row3">
+    <h1>Drinks</h1>
+	<div class="row33">
+		<div class="drinks" style="background-image: url(images/menuholder.png)">
 			<h2>Steaks</h2>
 		</div>
-		<div class="menu" style="background-image: url(images/menuholder.png)">
+		<div class="drinks" style="background-image: url(images/menuholder.png)">
 			<h2>Quesadillas</h2>
 		</div>
-		<div class="menu" style="background-image: url(images/menuholder.png)">
+		<div class="drinks" style="background-image: url(images/menuholder.png)">
 			<h2>Soups and Salads</h2>
 		</div>
-
 	</div>
 
-	<div class="row22">
-		<div class="menu" style="background-image: url(images/menuholder.png)">
+	<div class="row33">
+		<div class="drinks" style="background-image: url(images/menuholder.png)">
 			<h2>A La Carte</h2>
 		</div>
-		<div class="menu" style="background-image: url(images/menuholder.png)">
+		<div class="drinks" style="background-image: url(images/menuholder.png)">
 			<h2>Burritos</h2>
 		</div>
-		<div class="menu" style="background-image: url(images/menuholder.png)">
+		<div class="drinks" style="background-image: url(images/menuholder.png)">
 			<h2>Vegetarian</h2>
 		</div>
 	</div>
 </div>
-	
+    </div>	
 
-		
-
-<div class="row3">	
+<div class="row4">	
+    <div class="row41">
 	<br>
 	<br>
 	
@@ -215,7 +307,8 @@
 	
 	<h2>Address</h2>
 	<p>964 South Main Street <br> Maryville, MO 64468</p>
-	
+    </div>
+    <div class="row42">
 	<h2>Hours</h2>
 	<p>Monday: 11:00 AM - 10:00 PM</p>
 	<p>Tuesday: 11:00 AM - 10:00 PM</p>
@@ -224,12 +317,9 @@
 	<p>Friday: 11:00 AM - 10:30 PM</p>
 	<p>Saturday: 11:00 AM - 10:30 PM</p>
 	<p>Sunday: 11:00 AM - 10:00 PM</p>
-	
+	</div>
 	
 
-	
-</div>
-	
 </div>
 </body>
 </html>
