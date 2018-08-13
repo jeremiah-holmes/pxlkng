@@ -30,7 +30,7 @@ body {
 
   	font-size: 5vw;
 	color: black;
-	background: url("/images/greytexture.png");
+	background-color: gray;
 }
 .header .h1 {
     text-shadow: 2px 2px 2px black;
