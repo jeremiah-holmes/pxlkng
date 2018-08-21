@@ -18,7 +18,7 @@ body {
 	right: 0;
 	padding: var(--bar-height) 0 0 0;
 }
-.header2 {
+.header1x3 {
     text-align: center;
 	display: flex;
 	flex-direction: column;
@@ -26,7 +26,9 @@ body {
     height: 10vw;
     width: 35vw;
     margin-left: 32.5vw;
-
+    
+    margin-top: 17.5vh;
+    margin-bottom: 17.5vh;
 
   	font-size: 5vw;
 	color: black;
@@ -38,24 +40,26 @@ body {
 .header2 .h1 {
     margin-left: 100vw;
 }
-.header11  {
+.header1x1  {
     color: white;
     text-align: center;
     margin-top: 17.5vh;
-    margin-bottom: 17.5vh;
     margin-left: 0vw;
 }
-.header12  {
+.header1x2  {
     cursor: help;
     color: white;
     text-align: center;
-    margin-top: 17.5vh;
-    margin-bottom: 17.5vh;
+    margin-bottom: 18vh;
     margin-left: 0vw;
 }
 
 .spacer {
-    height: 10vh;
+    border: 1px solid;
+    width: 99vw;
+    color: inherit;
+    height: 20vh;
+    box-shadow: 10px 0px 10px 10px red;
 }
 .section {
     
@@ -76,7 +80,7 @@ body {
 	
 }
 .section .elmaguey {
-	margin: 10vh 0vw;
+	margin: 15vh 0vw;
 	font-size: 10px;
     height: 10vh;
 }
