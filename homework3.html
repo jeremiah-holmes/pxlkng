@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>HolmesJHW3.java</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+body {color: #ffffff; background-color: #121e31; font-family: Monospaced}
+pre {color: #ffffff; background-color: #121e31; font-family: Monospaced}
+table {color: #ffffff; background-color: #121e31; font-family: Monospaced}
+.string {color: #e2ce00}
+.ST4 {color: #e2ce00; font-family: Monospaced; font-weight: bold}
+.number {color: #eddd3d}
+.ST3 {color: #098a18}
+.literal {color: #f8bb00}
+.ST1 {color: #428bdd; font-family: Monospaced; font-weight: bold}
+.ST0 {color: #428bdd; font-family: Monospaced; font-style: italic}
+.ST2 {color: #ec8e01}
+-->
+</style>
+</head>
+<body>
+<table width="100%"><tr><td align="center">C:\Users\S528451\Documents\NetBeansProjects\HolmesJHW3\src\holmesjhw3\HolmesJHW3.java</td></tr></table>
+<pre>
+ 1 <span class="literal">package</span> holmesjhw3;
+ 2 
+ 3 <span class="ST0">/**</span>
+ 4 <span class="ST0"> *</span>
+ 5 <span class="ST0"> * </span><span class="ST1">@author</span> <span class="ST0">S528451</span> 
+ 6 <span class="ST0"> * </span><span class="ST0">Jeremiah</span> <span class="ST0">Holmes</span>
+ 7 <span class="ST0"> * 10/24/2018</span>
+ 8 <span class="ST0"> * </span><span class="ST0">Homework</span><span class="ST0"> 3</span>
+ 9 <span class="ST0"> * </span>
+10  <span class="ST0">*/</span>
+11 <span class="literal">import</span> java.io.*;
+12 <span class="literal">import</span> java.util.*;
+13 <span class="literal">public</span> <span class="literal">class</span> HolmesJHW3 {
+14 
+15     <span class="ST0">/**</span>
+16 <span class="ST0">     * </span><span class="ST1">@param</span> <span class="ST0">args</span> <span class="ST0">the</span> <span class="ST0">command</span> <span class="ST0">line</span> <span class="ST0">arguments</span>
+17      <span class="ST0">*/</span>
+18     <span class="literal">public</span> <span class="literal">static</span> <span class="literal">void</span> main(String[] <span class="ST2">args</span>) <span class="literal">throws</span> FileNotFoundException 
+19     {
+20         <span class="ST0">// Impport needed</span>
+21         File studentList = <span class="literal">new</span> File(<span class="string">&quot;</span><span class="string">studentList.txt</span><span class="string">&quot;</span>);
+22         PrintWriter fileWriter = <span class="literal">new</span> PrintWriter(<span class="string">&quot;</span><span class="string">studentList.txt</span><span class="string">&quot;</span>);
+23         Random rand = <span class="literal">new</span> Random();
+24         Scanner scan = <span class="literal">new</span> Scanner(System.<span class="ST3">in</span>);
+25         Scanner fileInput = <span class="literal">new</span> Scanner(studentList);
+26         
+27         <span class="ST0">// Create an array to store each of the class levels</span>
+28         String[] classLevels = <span class="literal">new</span> String[<span class="number">4</span>];
+29         classLevels[<span class="number">0</span>] = <span class="string">&quot;</span><span class="string">freshman</span><span class="string">&quot;</span>;
+30         classLevels[<span class="number">1</span>] = <span class="string">&quot;</span><span class="string">sophomore</span><span class="string">&quot;</span>;
+31         classLevels[<span class="number">2</span>] = <span class="string">&quot;</span><span class="string">junior</span><span class="string">&quot;</span>;
+32         classLevels[<span class="number">3</span>] = <span class="string">&quot;</span><span class="string">senior</span><span class="string">&quot;</span>;
+33         
+34         
+35         <span class="ST0">// Store student info to text file</span>
+36         String[] allStudents = <span class="literal">new</span> String[<span class="number">1000</span>];
+37         <span class="literal">for</span> (<span class="literal">int</span> coll = <span class="number">0</span>; coll &lt; allStudents.<span class="ST3">length</span>; coll++)
+38         {
+39             fileWriter.print(<span class="string">&quot;</span><span class="string">FirstName</span><span class="string">&quot;</span> + (coll + <span class="number">1</span>) + <span class="string">&quot;</span> <span class="string">&quot;</span>);
+40             fileWriter.print(<span class="string">&quot;</span><span class="string">LastName</span><span class="string">&quot;</span> + (coll + <span class="number">1</span>) + <span class="string">&quot;</span> <span class="string">&quot;</span>);
+41             fileWriter.print(classLevels[rand.nextInt(<span class="number">4</span>)] + <span class="string">&quot;</span> <span class="string">&quot;</span>);
+42             <span class="literal">double</span> gpa = (rand.nextInt(<span class="number">201</span>) + <span class="number">200</span>) / <span class="number">100.00</span>;
+43             fileWriter.printf(<span class="string">&quot;</span><span class="string">%4.2f </span><span class="ST4">\n</span><span class="string">&quot;</span>, gpa);
+44         } 
+45         fileWriter.close();
+46         
+47         <span class="ST0">// Copy all student info from txt file to array</span>
+48         <span class="literal">int</span> j = <span class="number">0</span>;
+49         <span class="literal">while</span> (fileInput.hasNext())
+50         {
+51             String student = fileInput.nextLine();
+52             allStudents[j] = student;
+53             j++;
+54         }
+55         
+56         <span class="ST0">// Create an new ArrayList and fill it with students requested for report</span>
+57         ArrayList&lt;String&gt; reportStudents = <span class="literal">new</span> ArrayList&lt;&gt;();
+58         System.<span class="ST3">out</span>.print(<span class="string">&quot;</span><span class="string">Enter a student last name, &#39;quit&#39; when finished: </span><span class="string">&quot;</span>);
+59         String lName = scan.nextLine() + <span class="string">&quot;</span> <span class="string">&quot;</span>;
+60         <span class="literal">while</span> (!lName.contains(<span class="string">&quot;</span><span class="string">quit</span><span class="string">&quot;</span>)) 
+61         {
+62             
+63             reportStudents.add(lName);
+64             System.<span class="ST3">out</span>.print(<span class="string">&quot;</span><span class="string">Enter a student last name, &#39;quit&#39; when finished: </span><span class="string">&quot;</span>);
+65             lName = scan.nextLine() + <span class="string">&quot;</span> <span class="string">&quot;</span>;
+66         }
+67         
+68         <span class="ST0">// Print each Student record for each entered name</span>
+69         System.<span class="ST3">out</span>.println(<span class="string">&quot;</span><span class="ST4">\n</span><span class="string">Student Report:</span><span class="string">&quot;</span>);
+70         <span class="literal">for</span> (String record : allStudents)
+71         {
+72             <span class="literal">for</span> (String students : reportStudents)
+73                 {
+74                     <span class="literal">if</span> (record.contains(students))
+75                     {
+76                         System.<span class="ST3">out</span>.println(record);
+77                     }
+78                 }
+79             
+80             
+81         fileInput.close();   
+82         }
+83     
+84     }
+85 }
+</pre></body>
+</html>
