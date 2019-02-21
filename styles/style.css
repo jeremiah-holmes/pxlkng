@@ -3,7 +3,7 @@
     src: url("/fonts/CaviarDreams.ttf")
 }
 * {
-    
+
     font-family: caviarDreams;
 }
 body {
@@ -30,7 +30,7 @@ body {
     margin-top: 17.5vh;
     margin-bottom: 17.5vh;
 
-  	font-size: 5vw;
+  	font-size: 4vw;
 	color: black;
 	background-color: gray;
 }
