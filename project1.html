@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Project1.java</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+body {color: #ffffff; background-color: #121e31; font-family: Monospaced}
+pre {color: #ffffff; background-color: #121e31; font-family: Monospaced}
+table {color: #ffffff; background-color: #121e31; font-family: Monospaced}
+.string {color: #e2ce00}
+.ST4 {color: #e2ce00; font-family: Monospaced; font-weight: bold}
+.ST5 {color: #808080}
+.number {color: #eddd3d}
+.ST3 {color: #098a18}
+.literal {color: #f8bb00}
+.ST1 {color: #428bdd; font-family: Monospaced; font-weight: bold}
+.ST0 {color: #428bdd; font-family: Monospaced; font-style: italic}
+.ST2 {color: #ec8e01}
+-->
+</style>
+</head>
+<body>
+
+<pre>
+ 12 <span class="literal">import</span> java.util.*;
+ 13 <span class="literal">public</span> <span class="literal">class</span> HolmesJProject1 {
+ 14 
+ 15     <span class="ST0">/**</span>
+ 16 <span class="ST0">     * </span><span class="ST1">@param</span> <span class="ST0">args</span> <span class="ST0">the</span> <span class="ST0">command</span> <span class="ST0">line</span> <span class="ST0">arguments</span>
+ 17      <span class="ST0">*/</span>
+ 18     <span class="literal">public</span> <span class="literal">static</span> <span class="literal">void</span> main(String[] <span class="ST2">args</span>) 
+ 19     {
+ 20         <span class="ST0">// Print Initial Deck</span>
+ 21         System.<span class="ST3">out</span>.println(<span class="string">&quot;</span><span class="string">Original Order of Deck:</span><span class="string">&quot;</span>);
+ 22         
+ 23         <span class="ST0">// Create String array variable and copy newDeck class to it</span>
+ 24         String[] theDeck;
+ 25         theDeck = newDeck().clone();
+ 26         printDeck(theDeck);
+ 27 
+ 28         
+ 29         System.<span class="ST3">out</span>.println(<span class="string">&quot;</span><span class="ST4">\n</span><span class="string">Shuffle 1:</span><span class="string">&quot;</span>);
+ 30         theDeck = newDeck().clone();
+ 31         String[] <span class="ST5">shuffledDeck</span> = <span class="literal">new</span> String[<span class="number">52</span>];
+ 32         <span class="literal">for</span> ( <span class="literal">int</span> i = <span class="number">0</span>; i &lt;= <span class="number">51</span>; i++ )
+ 33         {
+ 34             printCard(theDeck, deal(theDeck));
+ 35             System.<span class="ST3">out</span>.println(<span class="string">&quot;&quot;</span>);
+ 36         }
+ 37         
+ 38         
+ 39         System.<span class="ST3">out</span>.println(<span class="string">&quot;</span><span class="ST4">\n</span><span class="string">Shuffle 2:</span><span class="string">&quot;</span>);
+ 40         theDeck = newDeck().clone();
+ 41         <span class="literal">for</span> ( <span class="literal">int</span> i = <span class="number">0</span>; i &lt;= <span class="number">51</span>; i++ )
+ 42         {
+ 43             printCard(theDeck, deal(theDeck));
+ 44             System.<span class="ST3">out</span>.println(<span class="string">&quot;&quot;</span>);
+ 45         }
+ 46         
+ 47         
+ 48         <span class="ST0">// Print 5 hands from the same deck</span>
+ 49         <span class="literal">int</span> hand = <span class="number">1</span>;
+ 50         theDeck = newDeck().clone();
+ 51         <span class="literal">for</span> ( <span class="literal">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++ )
+ 52         {
+ 53             System.<span class="ST3">out</span>.print(<span class="string">&quot;</span><span class="ST4">\n</span><span class="string">Hand </span><span class="string">&quot;</span> + hand++ + <span class="string">&quot;</span><span class="string">: </span><span class="string">&quot;</span>);
+ 54             <span class="literal">for</span> ( <span class="literal">int</span> j = <span class="number">0</span>; j &lt; <span class="number">4</span>; j++ )
+ 55             {
+ 56                 printCard(theDeck, deal(theDeck));
+ 57                 System.<span class="ST3">out</span>.print(<span class="string">&quot;</span><span class="string">, </span><span class="string">&quot;</span>);
+ 58             }
+ 59             printCard(theDeck, deal(theDeck));
+ 60             
+ 61         }
+ 62         System.<span class="ST3">out</span>.println(<span class="string">&quot;&quot;</span>);
+ 63     }
+ 64     
+ 65     <span class="ST0">// Returns an ordered deck</span>
+ 66     <span class="literal">public</span> <span class="literal">static</span> String[] newDeck()
+ 67     {
+ 68         <span class="ST0">// Create String Array with space for index 0-51</span>
+ 69         String[] newDeck = <span class="literal">new</span> String[<span class="number">52</span>];
+ 70         
+ 71         <span class="ST0">// Store the rank as String in Array per index</span>
+ 72         <span class="literal">for</span> ( <span class="literal">int</span> i = <span class="number">0</span>; i &lt;= <span class="number">51</span>; i++ )
+ 73         {
+ 74             <span class="literal">if</span> ( i &lt;= <span class="number">9</span> || i &gt;= <span class="number">40</span> &amp;&amp; i&lt;= <span class="number">42</span>)
+ 75             {
+ 76                 newDeck[i] = <span class="string">&quot;</span><span class="string">Clubs</span><span class="string">&quot;</span>;
+ 77             }
+ 78             <span class="literal">if</span> (i &gt;= <span class="number">10</span> &amp;&amp; i&lt;= <span class="number">19</span> ||
+ 79                     i &gt;= <span class="number">43</span> &amp;&amp; i &lt;= <span class="number">45</span> )
+ 80             {
+ 81                 newDeck[i] = <span class="string">&quot;</span><span class="string">Diamonds</span><span class="string">&quot;</span>;
+ 82             }
+ 83             <span class="literal">if</span> (i &gt;= <span class="number">20</span> &amp;&amp; i&lt;= <span class="number">29</span> ||
+ 84                     i &gt;= <span class="number">46</span> &amp;&amp; i &lt;= <span class="number">48</span> )
+ 85             {
+ 86                 newDeck[i] = <span class="string">&quot;</span><span class="string">Hearts</span><span class="string">&quot;</span>;
+ 87             }
+ 88             <span class="literal">if</span> (i &gt;= <span class="number">30</span> &amp;&amp; i&lt;= <span class="number">39</span> ||
+ 89                     i &gt;= <span class="number">49</span> &amp;&amp; i &lt;= <span class="number">51</span> )
+ 90             {
+ 91                 newDeck[i] = <span class="string">&quot;</span><span class="string">Spades</span><span class="string">&quot;</span>;
+ 92             }
+ 93         }
+ 94         <span class="ST0">// Returns an Array of ranks</span>
+ 95         <span class="literal">return</span> newDeck;
+ 96     }
+ 97     
+ 98     <span class="ST0">// Return String textual representation of card drawn</span>
+ 99     <span class="literal">public</span> <span class="literal">static</span> String draw(String[] <span class="ST2">newDeck</span>, <span class="literal">int</span> <span class="ST2">cardIndex</span>)
+100     {
+101         <span class="ST0">// Store a suit to a String varible based upon index</span>
+102         
+103         String suit;
+104         <span class="literal">switch</span> (<span class="ST2">cardIndex</span>)
+105         {
+106             <span class="literal">case</span> <span class="number">0</span>:
+107             <span class="literal">case</span> <span class="number">10</span>:
+108             <span class="literal">case</span> <span class="number">20</span>:
+109             <span class="literal">case</span> <span class="number">30</span>:
+110                 suit = <span class="string">&quot;</span><span class="string">A</span><span class="string">&quot;</span>;
+111                 <span class="literal">break</span>;
+112             <span class="literal">case</span> <span class="number">40</span>:
+113             <span class="literal">case</span> <span class="number">43</span>:
+114             <span class="literal">case</span> <span class="number">46</span>:
+115             <span class="literal">case</span> <span class="number">49</span>:
+116                 suit = <span class="string">&quot;</span><span class="string">J</span><span class="string">&quot;</span>;
+117                 <span class="literal">break</span>;
+118             <span class="literal">case</span> <span class="number">41</span>:
+119             <span class="literal">case</span> <span class="number">44</span>:
+120             <span class="literal">case</span> <span class="number">47</span>:
+121             <span class="literal">case</span> <span class="number">50</span>:
+122                 suit = <span class="string">&quot;</span><span class="string">Q</span><span class="string">&quot;</span>;
+123                 <span class="literal">break</span>;
+124             <span class="literal">case</span> <span class="number">42</span>:
+125             <span class="literal">case</span> <span class="number">45</span>:
+126             <span class="literal">case</span> <span class="number">48</span>:
+127             <span class="literal">case</span> <span class="number">51</span>:
+128                 suit = <span class="string">&quot;</span><span class="string">K</span><span class="string">&quot;</span>;
+129                 <span class="literal">break</span>;
+130             <span class="literal">default</span>:
+131                 <span class="literal">int</span> i = <span class="ST2">cardIndex</span>;
+132                 i = (i % <span class="number">10</span>) + <span class="number">1</span>;
+133                 suit = <span class="string">&quot;&quot;</span> + i;
+134                 <span class="literal">break</span>;
+135         }
+136         
+137         <span class="ST0">// Concat suit and rank </span>
+138         
+139         <span class="ST2">newDeck</span>[<span class="ST2">cardIndex</span>] = suit + <span class="string">&quot;</span><span class="string"> of </span><span class="string">&quot;</span> + <span class="ST2">newDeck</span>[<span class="ST2">cardIndex</span>];
+140         String draw1 = <span class="ST2">newDeck</span>[<span class="ST2">cardIndex</span>]; 
+141         <span class="ST2">newDeck</span>[<span class="ST2">cardIndex</span>] = <span class="string">&quot;</span><span class="string">used</span><span class="string">&quot;</span>;
+142         
+143         
+144         <span class="literal">return</span> draw1;        
+145     }
+146     
+147     <span class="ST0">// Print the Card</span>
+148     <span class="literal">public</span> <span class="literal">static</span> <span class="literal">void</span> printCard(String[] <span class="ST2">newDeck</span>, <span class="literal">int</span> <span class="ST2">cardIndex</span>)
+149     {
+150        
+151         System.<span class="ST3">out</span>.print(draw(<span class="ST2">newDeck</span>, <span class="ST2">cardIndex</span>));
+152         
+153     }
+154     
+155     <span class="ST0">// Print the Deck</span>
+156     <span class="literal">public</span> <span class="literal">static</span> <span class="literal">void</span> printDeck(String[] <span class="ST2">newDeck</span>)
+157     {
+158         String <span class="ST5">card</span>;
+159         <span class="literal">for</span> (<span class="literal">int</span> i = <span class="number">0</span>; i &lt; <span class="ST2">newDeck</span>.<span class="ST3">length</span>; i++) 
+160         {
+161             
+162             System.<span class="ST3">out</span>.println(draw(<span class="ST2">newDeck</span>, i));
+163         } 
+164     }
+165     
+166     <span class="literal">public</span> <span class="literal">static</span> <span class="literal">int</span> deal(String[] <span class="ST2">newDeck</span>)
+167     {
+168         Random rand = <span class="literal">new</span> Random();
+169         <span class="literal">int</span> card = rand.nextInt(<span class="number">52</span>);
+170         <span class="literal">while</span> (<span class="ST2">newDeck</span>[card].contains(<span class="string">&quot;</span><span class="string">used</span><span class="string">&quot;</span>))
+171         {
+172             card = rand.nextInt(<span class="number">52</span>);
+173             
+174         }
+175         <span class="literal">return</span> card;
+176     }   
+177 
+178 }
+179 
+</pre></body>
+</html>
